@@ -1,0 +1,501 @@
+     :root {
+            --color-primary: #1e88e5;
+            --color-secondary: #c62828;
+            --color-accent: #ffeb3b;
+            --color-background: #121212;
+            --color-surface: #1e1e1e;
+            --color-paper: #212121;
+            --color-text-primary: #e0e0e0;
+            --color-text-secondary: #9e9e9e;
+            --color-border: #333333;
+            --font-serif: 'Georgia', serif;
+            --font-sans: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--color-background);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: var(--color-text-primary);
+        }
+
+        /* Cabeçalho do jornal */
+        .newspaper-header {
+            background-color: var(--color-surface);
+            color: white;
+            padding: 20px 0;
+            border-bottom: 4px solid var(--color-primary);
+        }
+
+        .newspaper-title {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+            background: linear-gradient(90deg, var(--color-primary), #64b5f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .newspaper-subtitle {
+            font-style: italic;
+            letter-spacing: 1px;
+            color: var(--color-text-secondary);
+        }
+
+        .newspaper-info {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 5px 0;
+            font-weight: bold;
+        }
+
+        /* Navegação */
+        .section-nav {
+            background-color: var(--color-surface);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .section-nav a {
+            color: var(--color-text-primary);
+            font-weight: bold;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .section-nav a:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        /* Layout da página */
+        .newspaper-content {
+            background-color: var(--color-paper);
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        /* Artigo principal */
+        .main-article {
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .headline {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+        }
+
+        .subheadline {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--color-text-secondary);
+            margin-bottom: 20px;
+            font-family: var(--font-serif);
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .article-content {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        .article-content p:first-child::first-letter {
+            font-size: 3.5rem;
+            font-weight: bold;
+            float: left;
+            line-height: 0.9;
+            margin-right: 8px;
+            color: var(--color-primary);
+        }
+
+        .dropcap {
+            font-size: 3.5rem;
+            font-weight: bold;
+            float: left;
+            line-height: 0.9;
+            margin-right: 8px;
+            color: var(--color-primary);
+        }
+
+        /* Colunas laterais */
+        .sidebar {
+            background-color: rgba(30, 136, 229, 0.1);
+            padding: 20px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .sidebar-title {
+            font-family: var(--font-serif);
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--color-border);
+        }
+
+        .sidebar-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* Citações e destaques */
+        .pullquote {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--color-primary);
+            padding: 20px 40px;
+            border-left: 4px solid var(--color-secondary);
+            margin: 30px 0;
+            background-color: rgba(30, 136, 229, 0.1);
+        }
+
+        .infobox {
+            background-color: rgba(30, 136, 229, 0.05);
+            border: 1px solid var(--color-border);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .infobox-title {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 10px 15px;
+            margin: -20px -20px 15px -20px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Imagens */
+        .article-image {
+            margin: 20px 0;
+            border: 1px solid var(--color-border);
+            background-color: var(--color-surface);
+        }
+
+        .article-image img {
+            max-width: 100%;
+            height: auto;
+            opacity: 0.9; /* Slightly dimmed for dark theme */
+        }
+
+        .image-caption {
+            background-color: rgba(255,255,255,0.05);
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            font-style: italic;
+            text-align: center;
+            color: var(--color-text-secondary);
+        }
+
+        /* Rodapé do jornal */
+        .newspaper-footer {
+            background-color: var(--color-surface);
+            color: var(--color-text-primary);
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        .footer-title {
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 8px;
+        }
+
+        /* Elementos específicos */
+        .culture-icon {
+            color: var(--color-primary);
+            margin-right: 5px;
+        }
+
+        .stat-box {
+            background-color: rgba(30, 136, 229, 0.2);
+            color: var(--color-text-primary);
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            line-height: 1;
+            background: linear-gradient(90deg, var(--color-primary), #64b5f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-description {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .newsletter-form {
+            background-color: rgba(30, 136, 229, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .related-articles {
+            margin-top: 40px;
+        }
+
+        .related-title {
+            font-family: var(--font-serif);
+            font-size: 1.7rem;
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .related-item {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .related-item h4 {
+            margin-bottom: 5px;
+        }
+
+        .related-item h4 a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .related-item h4 a:hover {
+            color: #64b5f6;
+            text-decoration: underline;
+        }
+
+        .related-item p {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Brazilian flag colors accent */
+        .br-accent-green {
+            color: #009c3b;
+        }
+
+        .br-accent-yellow {
+            color: #ffdf00;
+        }
+
+        .br-accent-blue {
+            color: #002776;
+        }
+
+        /* Timeline styles */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--color-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--color-paper);
+            border: 4px solid var(--color-primary);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-left {
+            left: 0;
+        }
+
+        .timeline-right {
+            left: 50%;
+        }
+
+        .timeline-left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--color-primary);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--color-primary);
+        }
+
+        .timeline-right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--color-primary);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--color-primary) transparent transparent;
+        }
+
+        .timeline-right::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--color-surface);
+            position: relative;
+            border-radius: 6px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .timeline-date {
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-container::before {
+                left: 60px;
+                border: medium solid var(--color-primary);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--color-primary) transparent transparent;
+            }
+
+            .timeline-left::after, .timeline-right::after {
+                left: 15px;
+            }
+
+            .timeline-right {
+                left: 0%;
+            }
+        }
+
+        /* Cards for cultural impacts */
+        .impact-card {
+            background-color: var(--color-surface);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid var(--color-border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .impact-card-header {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .impact-card-body {
+            padding: 20px;
+        }
+
+        .impact-card-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* Improvements for dark mode readability */
+        a {
+            color: #64b5f6;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+
+        .btn-outline-primary {
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        /* Highlight text */
+        .highlight {
+            background-color: rgba(255, 235, 59, 0.15);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
